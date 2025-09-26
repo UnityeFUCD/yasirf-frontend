@@ -6,8 +6,8 @@
 - Responsiveness: constraints show fixed height with children using `layoutSizing` hug/fill values; paddings to be respected when building the flex layout.
 
 ## Tokens & Tailwind Wiring
-- `design/tokens.json` defines shared colors (`ink`, `surface`, `accentLime`), fonts (Rajdhani 400/700, Manrope 300), radii (8/31/50/100px), and tracking presets.
-- `src/styles/tokens.css` now exposes CSS variables (`--color-ink`, `--radius-50`, `--tracking-sign-in`, etc.) plus legacy aliases for existing styles.
+- `design/tokens.json` defines shared colors (`ink`, `surface`, `accentLime`), alpha overlays for surface/accent blends, border opacities, fonts (Rajdhani 400/700, Manrope 300), radii (8/31/50/100px), and tracking presets.
+- `src/styles/tokens.css` now exposes CSS variables (`--nav-surface-05`, `--nav-accent-24`, etc.) plus legacy aliases for existing styles.
 - `tailwind.config.js` extends the theme with new color aliases (`ink`, `surface`, `accent-lime`), font families (`nav-rajdhani`, `nav-manrope`), radii (`nav-8`…`nav-100`), letter spacing (`nav-catalog`, `nav-sign-in`), and backdrop blur utilities.
 
 ## Assets
@@ -19,4 +19,5 @@
 
 ## Checks & Notes
 - `scripts/check_components_no_hex.sh` now targets `src/components/Navbar`; the new component ships without raw hex values and the check passes. Legacy components still rely on fixed hex colors and remain untouched.
+- `src/components/Navbar/Navbar.tsx` consumes the new nav alpha/border tokens so hover/focus states match Figma opacities.
 - No other blockers; navbar implementation (`src/components/Navbar/Navbar.tsx`) consumes the spec, tokens, and assets generated above.

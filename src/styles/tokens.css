@@ -4,6 +4,26 @@
   --color-surface: #fbfbff;
   --color-accent-lime: #c8ff00;
 
+  --nav-accent-solid: #c8ff00;
+  --nav-accent-05: rgba(200, 255, 0, 0.05);
+  --nav-accent-08: rgba(200, 255, 0, 0.08);
+  --nav-accent-10: rgba(200, 255, 0, 0.1);
+  --nav-accent-15: rgba(200, 255, 0, 0.15);
+  --nav-accent-24: rgba(200, 255, 0, 0.24);
+
+  --nav-surface-05: rgba(251, 251, 255, 0.05);
+  --nav-surface-08: rgba(251, 251, 255, 0.08);
+  --nav-surface-12: rgba(251, 251, 255, 0.12);
+
+  --nav-border-surface-20: rgba(251, 251, 255, 0.2);
+  --nav-border-surface-28: rgba(251, 251, 255, 0.28);
+  --nav-border-surface-32: rgba(251, 251, 255, 0.32);
+  --nav-border-surface-40: rgba(251, 251, 255, 0.4);
+
+  --nav-border-accent-40: rgba(200, 255, 0, 0.4);
+  --nav-border-accent-55: rgba(200, 255, 0, 0.55);
+  --nav-border-accent-60: rgba(200, 255, 0, 0.6);
+
   /* Legacy aliases kept for existing styles */
   --bg-deep: var(--color-ink);
   --text-on-dark: var(--color-surface);
