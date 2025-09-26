@@ -20,4 +20,5 @@
 ## Checks & Notes
 - `scripts/check_components_no_hex.sh` now targets `src/components/Navbar`; the new component ships without raw hex values and the check passes. Legacy components still rely on fixed hex colors and remain untouched.
 - `src/components/Navbar/Navbar.tsx` consumes the new nav alpha/border tokens so hover/focus states match Figma opacities.
+- `NavCatalog` now uses a Radix dropdown populated from `navbarData` so the catalog button opens the full mega-menu, `NavCurrencySelector` wires the existing selects, and the cart trigger reuses `CartModal` for the flyout.
 - No other blockers; navbar implementation (`src/components/Navbar/Navbar.tsx`) consumes the spec, tokens, and assets generated above.

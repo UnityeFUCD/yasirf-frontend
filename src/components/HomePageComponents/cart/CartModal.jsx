@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 import ItemCard from "./ItemCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CiCircleQuestion } from "react-icons/ci";
@@ -13,22 +13,22 @@ import { useState } from "react";
 import { CartIcon } from "@/components/Icons/NavbarIcons";
 import { cn } from "@/lib/utils";
 
-export function CartModal({ triggerClassName = "" }) {
+export function CartModal({ triggerClassName = "", triggerContent }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <DropdownMenu open={menuOpen} onOpenChange={setMenuOpen}>
       <DropdownMenuTrigger asChild>
-        <Button
+        <button
+          type="button"
           className={cn(
-            "grid h-10 w-10 place-items-center rounded-full border border-navring/80 bg-navneutral text-textondark transition hover:bg-navneutral/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accentneon md:h-12 md:w-12",
-            "normal-case",
+            "inline-flex items-center justify-center transition focus-visible:outline-none",
             triggerClassName
           )}
           aria-label="Open cart"
         >
-          <CartIcon className="h-5 w-5" />
-        </Button>
+          {triggerContent ?? <CartIcon className="h-5 w-5" />}
+        </button>
       </DropdownMenuTrigger>
       {menuOpen && (
         <DropdownMenuContent
@@ -99,4 +99,5 @@ export function CartModal({ triggerClassName = "" }) {
 
 CartModal.propTypes = {
   triggerClassName: PropTypes.string,
+  triggerContent: PropTypes.node,
 };
