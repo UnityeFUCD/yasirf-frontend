@@ -33,59 +33,60 @@ export function CartModal({ triggerClassName = "", triggerContent }) {
       {menuOpen && (
         <DropdownMenuContent
           align="end"
-          sideOffset={16}
-          className="z-50 mt-4 w-[520px] max-h-[640px] overflow-hidden rounded-[32px] border border-[var(--nav-border-surface-32)] bg-[rgba(5,9,29,0.94)] p-6 text-surface shadow-[0_40px_80px_-40px_rgba(0,0,0,0.65)] backdrop-blur-nav"
+          sideOffset={20}
+          className="z-50 mt-4 w-[840px] max-h-[780px] overflow-hidden rounded-[36px] border border-[var(--nav-border-surface-32)] bg-[rgba(5,9,29,0.94)] p-8 text-surface shadow-[0_60px_120px_-45px_rgba(0,0,0,0.7)] backdrop-blur-nav"
         >
-          <ScrollArea className="max-h-[420px] pr-2">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4">
-                <h2 className="text-[24px] font-nav-rajdhani font-semibold uppercase tracking-[0.16em]">
-                  shopping cart (3 items)
-                </h2>
+          <ScrollArea className="max-h-[560px] pr-3">
+            <div className="space-y-8">
+              <div className="flex items-start justify-between border-b border-[var(--nav-border-surface-28)] pb-6">
+                <div>
+                  <p className="text-[12px] font-nav-manrope uppercase tracking-[0.2em] text-surface/60">
+                    Vanguard cart
+                  </p>
+                  <h2 className="mt-2 text-[32px] font-nav-rajdhani font-semibold uppercase tracking-[0.2em]">
+                    shopping cart (3 items)
+                  </h2>
+                </div>
                 <button
                   type="button"
                   onClick={() => setMenuOpen(false)}
-                  className="text-surface/60 transition hover:text-surface"
+                  className="rounded-full border border-[var(--nav-border-surface-32)] p-2 text-surface/60 transition hover:text-surface"
                 >
-                  <IoCloseOutline size={25} />
+                  <IoCloseOutline size={22} />
                 </button>
               </div>
-              <div>
+              <div className="space-y-6">
                 <ItemCard />
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/70">
+                <div className="flex items-center justify-between rounded-[16px] border border-[var(--nav-border-surface-28)] px-5 py-4 text-sm uppercase tracking-[0.12em] text-surface/70">
                   <span>Nerubian Conqueror Bundle</span>
-                  <span className="font-nav-rajdhani text-base text-surface">$20.99</span>
+                  <span className="font-nav-rajdhani text-lg text-surface">$20.99</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/70">
+                <div className="flex items-center justify-between rounded-[16px] border border-[var(--nav-border-surface-28)] px-5 py-4 text-sm uppercase tracking-[0.12em] text-surface/70">
                   <span>Payment service fee</span>
-                  <span className="font-nav-rajdhani text-base text-surface">$1.00</span>
+                  <span className="font-nav-rajdhani text-lg text-surface">$1.00</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/70">
+                <div className="flex items-center justify-between rounded-[16px] border border-[var(--nav-border-surface-28)] px-5 py-4 text-sm uppercase tracking-[0.12em] text-surface/70">
                   <span className="flex flex-col gap-1 text-left">
                     Apply Promo
-                    <span className="flex items-center gap-2 text-[11px] normal-case">
+                    <span className="flex items-center gap-2 text-[11px] normal-case text-surface/50">
                       Points you will receive <CiCircleQuestion />
                     </span>
                   </span>
-                  <span className="font-medium">
-                    <input
-                      type="text"
-                      className="w-[140px] rounded-[12px] border border-[var(--nav-border-surface-32)] bg-[var(--nav-surface-05)] px-4 py-2 text-right text-surface placeholder:text-surface/40 focus:border-[var(--nav-border-surface-40)] focus:outline-none"
-                      placeholder="XXXX-XXXX"
-                    />
-                  </span>
+                  <input
+                    type="text"
+                    className="w-[160px] rounded-[14px] border border-[var(--nav-border-surface-32)] bg-[var(--nav-surface-05)] px-4 py-2 text-right text-surface placeholder:text-surface/30 focus:border-[var(--nav-border-surface-40)] focus:outline-none"
+                    placeholder="XXXX-XXXX"
+                  />
                 </div>
-                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/90">
+                <div className="flex items-center justify-between rounded-[16px] border border-[var(--nav-border-surface-28)] px-5 py-4 text-sm uppercase tracking-[0.12em] text-surface/90">
                   <span>Subtotal</span>
-                  <span className="font-nav-rajdhani text-xl text-surface">$21.99</span>
+                  <span className="font-nav-rajdhani text-2xl text-surface">$21.99</span>
                 </div>
               </div>
             </div>
           </ScrollArea>
-          <div className="mt-6 flex items-center justify-end">
-            <Button className="rounded-[12px] px-6 py-3 font-nav-rajdhani text-base font-bold uppercase tracking-[0.12em] text-ink">
+          <div className="mt-8 flex items-center justify-end">
+            <Button className="rounded-[14px] px-8 py-3 font-nav-rajdhani text-base font-bold uppercase tracking-[0.16em] text-ink">
               get started
             </Button>
           </div>

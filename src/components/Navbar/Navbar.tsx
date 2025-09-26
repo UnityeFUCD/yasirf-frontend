@@ -1,6 +1,8 @@
 import { Fragment, useState } from "react";
 
 import logo from "@/assets/images/logo/logo.png";
+import { useEffect, useState } from "react";
+
 import { CartModal } from "@/components/HomePageComponents/cart/CartModal";
 import {
   DropdownMenu,
@@ -16,8 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { currencyData } from "@/lib/StaticData";
-import { navbarData } from "@/lib/StaticData";
+import { currencyData, navbarData } from "@/lib/StaticData";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const ICONS = {
@@ -109,7 +110,7 @@ const NavCatalog = () => (
 );
 
 const NavCurrencySelector = () => {
-  const initialCurrency = currencyData?.[0]?.currency ?? "USD";
+  const initialCurrency = currencyData?.[0]?.currency?.toLowerCase() ?? "usd";
   const [value, setValue] = useState(initialCurrency);
 
   return (
@@ -127,8 +128,8 @@ const NavCurrencySelector = () => {
               className="h-6 w-6"
             />
             <SelectValue
-              placeholder={initialCurrency}
-              className="tracking-[0.08em] text-[color:var(--color-accent-lime)]"
+              placeholder={initialCurrency.toUpperCase()}
+              className="uppercase tracking-[0.12em] text-[color:var(--color-accent-lime)]"
             />
           </span>
           <img
@@ -145,16 +146,15 @@ const NavCurrencySelector = () => {
       >
         {currencyData
           ?.map((data) => {
-            if (!data?.currency) return null;
-            const code = data.currency.toUpperCase();
+            const option = data?.currency?.toLowerCase();
+            if (!option) return null;
             return (
               <SelectItem
-                key={code}
-                value={code}
-                className="my-[2px] flex h-10 items-center justify-between rounded-[12px] px-4 text-[14px] font-nav-rajdhani uppercase tracking-[0.12em] text-[color:var(--color-accent-lime)] transition data-[highlighted]:bg-[var(--nav-accent-08)] data-[highlighted]:text-[color:var(--color-accent-lime)] data-[state=checked]:bg-[var(--nav-accent-08)] data-[state=checked]:text-ink"
+                key={option}
+                value={option}
+                className="my-[2px] flex h-10 items-center justify-center rounded-[12px] text-[16px] font-nav-rajdhani uppercase tracking-[0.12em] text-[color:var(--color-accent-lime)] transition data-[highlighted]:bg-[var(--nav-accent-08)] data-[highlighted]:text-[color:var(--color-accent-lime)] data-[state=checked]:bg-[var(--nav-accent-08)] data-[state=checked]:text-ink"
               >
-                <span>{code}</span>
-                <span className="text-xs text-surface/50">{data.country}</span>
+                {data.currency.toUpperCase()}
               </SelectItem>
             );
           })
@@ -165,6 +165,18 @@ const NavCurrencySelector = () => {
 };
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className="flex items-center px-[52px] pt-[28px] pb-[29px] text-surface">
       <a href="/" className="flex items-center" aria-label="Vanguard Boost home">
@@ -174,6 +186,11 @@ const Navbar = () => {
           className="h-[41px] w-auto"
           loading="lazy"
         />
+        <span
+          className={`ml-3 font-nav-rajdhani text-[18px] font-semibold uppercase tracking-[0.24em] text-surface transition-opacity duration-200 ${scrolled ? "opacity-0" : "opacity-100"}`}
+        >
+          Vanguard Boost
+        </span>
       </a>
 
       <NavCatalog />
