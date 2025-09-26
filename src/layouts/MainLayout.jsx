@@ -13,19 +13,19 @@ function MainLayout() {
     location.pathname === "/job-details" ||  
     location.pathname === "/job-application-form" ||
     location.pathname === "/about"  ||
-    location.pathname === "/app-games"
-    location.pathname === "/join-our-team" 
+    location.pathname === "/app-games" ||
+    location.pathname === "/join-our-team"; 
 
   return (
     <div>
       <ScrollRestoration />
       <div className="font-Rajdhani w-full h-full relative bg-background">
         {!hideLayout && (
-          <div className="absolute top-0 z-20 w-full">
+          <div className="fixed top-0 left-0 right-0 z-30">
             <Navbar />
           </div>
         )}
-        <div className="w-full">
+        <div className={`w-full ${hideLayout ? "" : "pt-[105px]"}`}>
           <Outlet />
         </div>
         {!hideLayout && <Footer />}

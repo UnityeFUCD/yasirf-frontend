@@ -29,7 +29,7 @@ const ICONS = {
 };
 
 const NavCatalog = () => (
-  <DropdownMenu>
+  <DropdownMenu modal={false}>
     <DropdownMenuTrigger asChild>
       <button
         type="button"
@@ -46,8 +46,8 @@ const NavCatalog = () => (
     </DropdownMenuTrigger>
     <DropdownMenuContent
       align="start"
-      sideOffset={12}
-      className="z-50 mt-[14px] w-[980px] rounded-[32px] border border-[var(--nav-border-surface-32)] bg-[rgba(5,9,29,0.94)] p-6 text-surface shadow-[0_40px_60px_-40px_rgba(0,0,0,0.6)] backdrop-blur-nav"
+      sideOffset={16}
+      className="z-50 mt-[16px] w-[980px] rounded-[32px] border border-[var(--nav-border-surface-32)] bg-[rgba(5,9,29,0.94)] p-6 text-surface shadow-[0_40px_60px_-40px_rgba(0,0,0,0.6)] backdrop-blur-nav"
     >
       <div className="flex gap-8">
         <div className="w-[200px]">
@@ -109,15 +109,14 @@ const NavCatalog = () => (
 );
 
 const NavCurrencySelector = () => {
-  const [value, setValue] = useState(
-    currencyData?.[0]?.currency?.toLowerCase() ?? "usd"
-  );
+  const initialCurrency = currencyData?.[0]?.currency ?? "USD";
+  const [value, setValue] = useState(initialCurrency);
 
   return (
     <Select value={value} onValueChange={setValue}>
       <SelectTrigger
         aria-label="Change currency"
-        className="group hidden h-12 w-[111px] items-center justify-between gap-[6px] rounded-nav-100 border border-[var(--nav-border-accent-40)] bg-[var(--nav-accent-05)] px-[12px] py-0 font-nav-rajdhani text-[18px] uppercase text-[color:var(--color-accent-lime)] backdrop-blur-nav-strong transition-[background-color,border-color,color] duration-200 hover:border-[var(--nav-border-accent-55)] hover:bg-[var(--nav-accent-08)] focus:border-[var(--nav-border-accent-60)] focus:bg-[var(--nav-accent-10)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--nav-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-transparent [&>span]:w-full [&>svg]:hidden lg:flex"
+        className="group hidden h-12 w-[111px] items-center justify-between gap-[6px] rounded-nav-100 border border-[var(--nav-border-accent-40)] bg-[var(--nav-accent-05)] px-[12px] py-0 font-nav-rajdhani text-[18px] uppercase text-[color:var(--color-accent-lime)] backdrop-blur-nav-strong transition-[background-color,border-color,color] duration-200 hover:border-[var(--nav-border-accent-55)] hover:bg-[var(--nav-accent-08)] data-[state=open]:border-[var(--nav-border-accent-60)] data-[state=open]:bg-[var(--nav-accent-10)] data-[state=open]:shadow-[0_20px_40px_-24px_rgba(200,255,0,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--nav-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-transparent [&>span]:w-full [&>svg]:hidden lg:flex"
       >
         <span className="flex w-full items-center justify-between">
           <span className="flex items-center gap-[6px]">
@@ -128,7 +127,7 @@ const NavCurrencySelector = () => {
               className="h-6 w-6"
             />
             <SelectValue
-              placeholder={currencyData?.[0]?.currency ?? "USD"}
+              placeholder={initialCurrency}
               className="tracking-[0.08em] text-[color:var(--color-accent-lime)]"
             />
           </span>
@@ -142,19 +141,20 @@ const NavCurrencySelector = () => {
       </SelectTrigger>
       <SelectContent
         align="end"
-        className="z-50 w-[144px] rounded-[20px] border border-[var(--nav-border-surface-32)] bg-[rgba(5,9,29,0.92)] p-2 text-[color:var(--color-accent-lime)] backdrop-blur-nav"
+        className="z-50 w-[160px] rounded-[20px] border border-[var(--nav-border-accent-40)] bg-[var(--nav-accent-05)] p-1 text-[color:var(--color-accent-lime)] backdrop-blur-nav"
       >
         {currencyData
           ?.map((data) => {
-            const option = data?.currency?.toLowerCase();
-            if (!option) return null;
+            if (!data?.currency) return null;
+            const code = data.currency.toUpperCase();
             return (
               <SelectItem
-                key={option}
-                value={option}
-                className="my-[2px] flex h-10 items-center justify-center rounded-[12px] text-[16px] font-nav-rajdhani uppercase tracking-[0.08em] text-[color:var(--color-accent-lime)] transition data-[highlighted]:bg-[var(--nav-accent-08)] data-[highlighted]:text-[color:var(--color-accent-lime)] data-[state=checked]:bg-[var(--nav-accent-08)] data-[state=checked]:text-ink"
+                key={code}
+                value={code}
+                className="my-[2px] flex h-10 items-center justify-between rounded-[12px] px-4 text-[14px] font-nav-rajdhani uppercase tracking-[0.12em] text-[color:var(--color-accent-lime)] transition data-[highlighted]:bg-[var(--nav-accent-08)] data-[highlighted]:text-[color:var(--color-accent-lime)] data-[state=checked]:bg-[var(--nav-accent-08)] data-[state=checked]:text-ink"
               >
-                {data.currency.toUpperCase()}
+                <span>{code}</span>
+                <span className="text-xs text-surface/50">{data.country}</span>
               </SelectItem>
             );
           })

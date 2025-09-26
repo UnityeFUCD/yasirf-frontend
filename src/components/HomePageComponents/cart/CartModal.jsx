@@ -13,18 +13,18 @@ import { useState } from "react";
 import { CartIcon } from "@/components/Icons/NavbarIcons";
 import { cn } from "@/lib/utils";
 
+const baseTriggerClass =
+  "grid h-10 w-10 place-items-center rounded-full border border-navring/80 bg-navneutral text-textondark transition hover:bg-navneutral/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accentneon md:h-12 md:w-12";
+
 export function CartModal({ triggerClassName = "", triggerContent }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <DropdownMenu open={menuOpen} onOpenChange={setMenuOpen}>
+    <DropdownMenu modal={false} open={menuOpen} onOpenChange={setMenuOpen}>
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className={cn(
-            "inline-flex items-center justify-center transition focus-visible:outline-none",
-            triggerClassName
-          )}
+          className={cn(baseTriggerClass, triggerClassName)}
           aria-label="Open cart"
         >
           {triggerContent ?? <CartIcon className="h-5 w-5" />}
@@ -32,65 +32,63 @@ export function CartModal({ triggerClassName = "", triggerContent }) {
       </DropdownMenuTrigger>
       {menuOpen && (
         <DropdownMenuContent
-          className="relative mt-6 w-[848px] border border-strokedark/60 bg-black/80 p-5 text-white backdrop-blur-xl md:-ml-[780px]"
-          style={{ border: "1px solid rgba(251, 251, 255, 0.24)" }}
+          align="end"
+          sideOffset={16}
+          className="z-50 mt-4 w-[520px] max-h-[640px] overflow-hidden rounded-[32px] border border-[var(--nav-border-surface-32)] bg-[rgba(5,9,29,0.94)] p-6 text-surface shadow-[0_40px_80px_-40px_rgba(0,0,0,0.65)] backdrop-blur-nav"
         >
-          <ScrollArea className="h-[800px]">
-            <div className="p-3">
-              <div className="flex items-center justify-between">
-                <h2 className="text-[32px] uppercase font-semibold tracking-wide  ">
+          <ScrollArea className="max-h-[420px] pr-2">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4">
+                <h2 className="text-[24px] font-nav-rajdhani font-semibold uppercase tracking-[0.16em]">
                   shopping cart (3 items)
                 </h2>
-                <button onClick={() => setMenuOpen(false)}>
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-surface/60 transition hover:text-surface"
+                >
                   <IoCloseOutline size={25} />
                 </button>
               </div>
-              <div className="py-5">
+              <div>
                 <ItemCard />
               </div>
-              <div className=" ">
-                <h3 className="font-thin flex items-center justify-between py-4 border-b border-gray-700">
-                  Nerubian Conqueror Bundle{" "}
-                  <span className="font-medium">$20.99</span>
-                </h3>
-              </div>
-              <div className=" ">
-                <h3 className="font-thin flex items-center justify-between py-4 border-b border-gray-700">
-                  Payment service fee
-                  <span className="font-medium">$1.00</span>
-                </h3>
-              </div>
-              <div className=" ">
-                <h3 className="font-thin flex items-center justify-between py-4 border-b border-gray-700">
-                  <span>
-                    Apply Promo <br />
-                    <span className="flex items-center gap-2">
-                      {" "}
-                      Points you will recieve <CiCircleQuestion />{" "}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/70">
+                  <span>Nerubian Conqueror Bundle</span>
+                  <span className="font-nav-rajdhani text-base text-surface">$20.99</span>
+                </div>
+                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/70">
+                  <span>Payment service fee</span>
+                  <span className="font-nav-rajdhani text-base text-surface">$1.00</span>
+                </div>
+                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/70">
+                  <span className="flex flex-col gap-1 text-left">
+                    Apply Promo
+                    <span className="flex items-center gap-2 text-[11px] normal-case">
+                      Points you will receive <CiCircleQuestion />
                     </span>
                   </span>
                   <span className="font-medium">
                     <input
                       type="text"
-                      className="px-4 py-2 bg-white/10 backdrop-blur-md outline-none"
+                      className="w-[140px] rounded-[12px] border border-[var(--nav-border-surface-32)] bg-[var(--nav-surface-05)] px-4 py-2 text-right text-surface placeholder:text-surface/40 focus:border-[var(--nav-border-surface-40)] focus:outline-none"
                       placeholder="XXXX-XXXX"
                     />
                   </span>
-                </h3>
-              </div>
-              <div className=" ">
-                <h3 className="font-thin flex items-center justify-between py-4   border-gray-700">
-                  Subtotal
-                  <span className="font-medium text-xl">$21.99</span>
-                </h3>
-              </div>
-              <div className="pt-10">
-                <Button className="rounded-none px-6 text-black font-bold">
-                  get started
-                </Button>
+                </div>
+                <div className="flex items-center justify-between border-b border-[var(--nav-border-surface-28)] pb-4 text-sm uppercase tracking-[0.12em] text-surface/90">
+                  <span>Subtotal</span>
+                  <span className="font-nav-rajdhani text-xl text-surface">$21.99</span>
+                </div>
               </div>
             </div>
           </ScrollArea>
+          <div className="mt-6 flex items-center justify-end">
+            <Button className="rounded-[12px] px-6 py-3 font-nav-rajdhani text-base font-bold uppercase tracking-[0.12em] text-ink">
+              get started
+            </Button>
+          </div>
         </DropdownMenuContent>
       )}
     </DropdownMenu>
