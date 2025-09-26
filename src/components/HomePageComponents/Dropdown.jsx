@@ -9,7 +9,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MenuIcon } from "../Icons/NavbarIcons";
+import { CatalogIcon } from "../Icons/NavbarIcons";
 import { Button } from "../ui/button";
 import { navbarData } from "@/lib/StaticData";
 import { cn } from "@/lib/utils";
@@ -22,14 +22,17 @@ export function Dropdown() {
         asChild
         className="focus:ring-offset-0 outline-none focus:ring-0 focus-visible:ring-offset-0 focus:outline-none focus:"
       >
-        <Button className="font-bold tracking-wider rounded-[8px] p-2 md:px-[14px] md:py-[10px] flex items-center gap-[10px]  ">
-          <span className="hidden md:inline">catalog{" "}</span>
-          <span className="w-[15px] h-[15px]">
-            <MenuIcon />
+        <Button
+          className="inline-flex items-center gap-2 rounded-full bg-accentneon px-5 py-2 font-rajdhani text-sm font-bold uppercase tracking-wide2 text-bgdeep transition [text-rendering:optimizeLegibility] hover:bg-accentneon/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accentneon"
+          aria-label="Open catalog"
+        >
+          <span className="hidden md:inline">catalog</span>
+          <span className="flex h-4 w-4 items-center justify-center">
+            <CatalogIcon className="h-4 w-4" />
           </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-[1330px] ml-60 relative bg-backgroundLight border border-primaryColor text-white px-[22px] py-4">
+      <DropdownMenuContent className="relative ml-60 w-[1330px] border border-strokedark/60 bg-backgroundLight/95 px-[22px] py-4 text-textondark">
         <div className="flex items-center gap-2">
           <div>
             <p className="text-gray-300 uppercase text-xs font-bold">

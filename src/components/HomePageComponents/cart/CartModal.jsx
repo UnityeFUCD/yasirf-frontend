@@ -1,4 +1,3 @@
-import { cartIcon } from "@/assets";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,19 +9,23 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { CiCircleQuestion } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
+import { CartIcon } from "@/components/Icons/NavbarIcons";
 
 export function CartModal() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild onClick={() => setMenuOpen(true)}>
-        <Button className="font-bold tracking-wider  rounded-full bg-primaryColor/15 backdrop-blur-[10px] text-white size-[36px] p-2 md:p-3  md:w-[55px] md:h-[55px]">
-          <img src={cartIcon} alt="" className="w-full h-full object-contain" />
+        <Button
+          className="grid h-10 w-10 place-items-center rounded-full border border-navring/80 bg-navneutral text-textondark transition hover:bg-navneutral/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accentneon md:h-12 md:w-12"
+          aria-label="Open cart"
+        >
+          <CartIcon className="h-5 w-5" />
         </Button>
       </DropdownMenuTrigger>
       {menuOpen && (
         <DropdownMenuContent
-          className="md:-ml-[780px] text-white w-[848px] font-Rajdhani p-5 bg-black/10 backdrop-blur-xl border-2 border-gray-600 rounded-none mt-6 relative"
+          className="relative mt-6 w-[848px] border border-strokedark/60 bg-black/80 p-5 text-white backdrop-blur-xl md:-ml-[780px]"
           style={{ border: "1px solid rgba(251, 251, 255, 0.24)" }}
         >
           <ScrollArea className="h-[800px]">

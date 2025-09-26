@@ -7,33 +7,37 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { currencyData } from "@/lib/StaticData";
+import { ChevronDownIcon, DollarIcon } from "@/components/Icons/NavbarIcons";
 
 export function SelectCurrency() {
   return (
     <Select className="uppercase" defaultValue={currencyData[0]?.currency}>
-      <SelectTrigger className="w-[120px] h-[48px] rounded-[100px] bg-primaryColor/10 text-primaryColor border-primaryColor/50 focus:ring-offset-0  ">
-        <SelectValue
-          placeholder="Select currency"
-          className="uppercase"
-          value={currencyData[0]}
-        />
+      <SelectTrigger className="group flex h-12 items-center justify-between gap-2 rounded-full border border-strokedark bg-accentneon px-4 py-0 text-xs font-rajdhani font-bold uppercase tracking-wide2 text-bgdeep transition hover:bg-accentneon/90 focus:ring-0 focus:ring-offset-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accentneon">
+        <div className="flex items-center gap-2">
+          <span className="flex h-4 w-4 items-center justify-center">
+            <DollarIcon className="h-4 w-4" />
+          </span>
+          <SelectValue placeholder="Select currency" className="uppercase" />
+        </div>
+        <ChevronDownIcon className="h-4 w-4 transition group-data-[state=open]:rotate-180" />
       </SelectTrigger>
-      <SelectContent className="bg-primaryColor/10 backdrop-blur-sm border-primaryColor/50 text-primaryColor/50 rounded-2xl mt-2 -ml-2 flex">
-        <SelectGroup className="">
+      <SelectContent className="mt-2 -ml-2 rounded-2xl border border-strokedark/60 bg-background/95 text-textondark shadow-lg backdrop-blur-sm">
+        <SelectGroup>
           {currencyData?.map((data, idx) => (
             <SelectItem
               key={`index + ${idx}`}
               value={data?.currency}
-              className="uppercase group hover:bg-transparent focus:bg-none focus:ring-offset-0 outline-none hover:text-primaryColor hover:bg-none cursor-pointer flex items-center gap-[6px] opacity-40 hover:opacity-100 transition-all duration-300 "
+              className="flex items-center gap-[6px] uppercase opacity-60 transition hover:bg-transparent hover:text-accentneon hover:opacity-100 focus:bg-transparent focus-visible:outline-none"
             >
               <span className="flex items-center gap-1">
-                <img
-                  src={data?.flag}
-                  alt="country flag"
-                  className="w-[25px] h-[25px] rounded-full "
-                />
-                <span></span>
-                <span className="text-lg">{data?.currency}</span>
+                {data?.flag && (
+                  <img
+                    src={data?.flag}
+                    alt=""
+                    className="h-[18px] w-[18px] rounded-full"
+                  />
+                )}
+                <span className="text-sm font-medium tracking-wide">{data?.currency}</span>
               </span>
             </SelectItem>
           ))}

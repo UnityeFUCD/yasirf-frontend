@@ -1,0 +1,15 @@
+:root {
+  --bg-deep: #05091d;
+  --text-on-dark: #fbfbff;
+  --accent-neon: #c8ff00;
+  --stroke-dark: #2c3140;
+  --nav-hero-gradient: radial-gradient(720px 360px at 120px 50%, rgba(200, 255, 0, 0.14) 0%, rgba(5, 9, 29, 0.08) 45%, rgba(5, 9, 29, 0) 70%);
+  --nav-neutral: #2e3721;
+  --nav-ring: #3a4725;
+}
+
+:root {
+  --font-rajdhani: "Rajdhani", sans-serif;
+  --font-manrope: "Manrope", system-ui, sans-serif;
+  --radius-base: 0.5rem;
+}
