@@ -1,0 +1,625 @@
+{
+  "id": "67:476",
+  "name": "Property 1=Default",
+  "size": {
+    "width": 1440.0,
+    "height": 105.0
+  },
+  "layout": {
+    "padding": {
+      "left": 52.0,
+      "right": 52.0,
+      "top": 28.0,
+      "bottom": 29.0
+    },
+    "layoutMode": null,
+    "primaryAxisAlignItems": null,
+    "counterAxisAlignItems": null,
+    "itemSpacing": null,
+    "constraints": {
+      "vertical": "TOP",
+      "horizontal": "LEFT"
+    }
+  },
+  "fills": [],
+  "strokes": [],
+  "effects": [],
+  "tailwind": {
+    "paddingClass": "px-[52px] pt-[28px] pb-[29px]",
+    "gapClass": null,
+    "roundedClass": null,
+    "trackingClass": null,
+    "backdropBlurClass": null
+  },
+  "children": [
+    {
+      "id": "108:5893",
+      "name": "logo",
+      "type": "FRAME",
+      "size": {
+        "width": 170.0,
+        "height": 41.78313064575195
+      },
+      "position": {
+        "left": 52.0,
+        "top": 31.5
+      },
+      "layout": {
+        "layoutMode": null,
+        "padding": {},
+        "itemSpacing": null,
+        "primaryAxisAlignItems": null,
+        "counterAxisAlignItems": null,
+        "counterAxisSizingMode": null,
+        "primaryAxisSizingMode": null
+      },
+      "fills": [],
+      "strokes": [],
+      "effects": [],
+      "cornerRadius": null,
+      "layoutSizing": {
+        "horizontal": null,
+        "vertical": null
+      },
+      "constraints": {
+        "vertical": "CENTER",
+        "horizontal": "LEFT"
+      },
+      "textStyles": [],
+      "tailwind": {}
+    },
+    {
+      "id": "38:966",
+      "name": "Frame 1618873366",
+      "type": "FRAME",
+      "size": {
+        "width": 117.0,
+        "height": 37.0
+      },
+      "position": {
+        "left": 254.0,
+        "top": 34.0
+      },
+      "layout": {
+        "layoutMode": "HORIZONTAL",
+        "padding": {
+          "paddingTop": 10.0,
+          "paddingBottom": 10.0,
+          "paddingLeft": 14.0,
+          "paddingRight": 14.0
+        },
+        "itemSpacing": 10.0,
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "counterAxisSizingMode": null,
+        "primaryAxisSizingMode": null
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#C8FF00",
+            "r": 0.7843,
+            "g": 1.0,
+            "b": 0.0,
+            "a": 1.0
+          }
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#FFFFFF",
+            "a": 0.2
+          },
+          "opacity": 0.2,
+          "weight": 1.0
+        }
+      ],
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10.0
+        }
+      ],
+      "cornerRadius": 8.0,
+      "layoutSizing": {
+        "horizontal": "HUG",
+        "vertical": "HUG"
+      },
+      "constraints": {
+        "vertical": "CENTER",
+        "horizontal": "CENTER"
+      },
+      "textStyles": [
+        {
+          "id": "38:967",
+          "name": "catalog",
+          "text": "catalog",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Bold",
+          "fontWeight": 700,
+          "fontStyle": "Bold",
+          "fontSize": 14.0,
+          "lineHeightPx": 16.80000114440918,
+          "letterSpacing": 2.1,
+          "letterSpacingEm": 0.15,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#05091D",
+                "r": 0.0196,
+                "g": 0.0353,
+                "b": 0.1137,
+                "a": 1.0
+              }
+            }
+          ]
+        }
+      ],
+      "tailwind": {
+        "paddingClass": "py-[10px] px-[14px]",
+        "gapClass": "gap-[10px]",
+        "roundedClass": "rounded-[8px]",
+        "backdropBlurClass": "backdrop-blur-[10]",
+        "trackingClass": "tracking-[2.1px]"
+      }
+    },
+    {
+      "id": "38:1312",
+      "name": "Frame 1618873189",
+      "type": "FRAME",
+      "size": {
+        "width": 351.0,
+        "height": 48.0
+      },
+      "position": {
+        "left": 771.0,
+        "top": 28.0
+      },
+      "layout": {
+        "layoutMode": null,
+        "padding": {},
+        "itemSpacing": null,
+        "primaryAxisAlignItems": null,
+        "counterAxisAlignItems": null,
+        "counterAxisSizingMode": null,
+        "primaryAxisSizingMode": null
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#FFFFFF",
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 0.05
+          },
+          "opacity": 0.05
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#FFFFFF",
+            "a": 0.2
+          },
+          "opacity": 0.2,
+          "weight": 1.0
+        }
+      ],
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10.0
+        }
+      ],
+      "cornerRadius": 50.0,
+      "layoutSizing": {
+        "horizontal": null,
+        "vertical": null
+      },
+      "constraints": {
+        "vertical": "TOP",
+        "horizontal": "LEFT"
+      },
+      "textStyles": [
+        {
+          "id": "38:1313",
+          "name": "Search",
+          "text": "Search",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#FFFFFF",
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          ]
+        }
+      ],
+      "tailwind": {
+        "roundedClass": "rounded-[50px]",
+        "backdropBlurClass": "backdrop-blur-[10]"
+      }
+    },
+    {
+      "id": "38:1123",
+      "name": "select region",
+      "type": "INSTANCE",
+      "size": {
+        "width": 111.0,
+        "height": 48.0
+      },
+      "position": {
+        "left": 1130.0,
+        "top": 28.0
+      },
+      "layout": {
+        "layoutMode": "VERTICAL",
+        "padding": {},
+        "itemSpacing": 10.0,
+        "primaryAxisAlignItems": null,
+        "counterAxisAlignItems": null,
+        "counterAxisSizingMode": "FIXED",
+        "primaryAxisSizingMode": "FIXED"
+      },
+      "fills": [],
+      "strokes": [],
+      "effects": [],
+      "cornerRadius": null,
+      "layoutSizing": {
+        "horizontal": "FIXED",
+        "vertical": "FIXED"
+      },
+      "constraints": {
+        "vertical": "TOP",
+        "horizontal": "LEFT"
+      },
+      "textStyles": [
+        {
+          "id": "I38:1123;38:1061",
+          "name": "usd",
+          "text": "usd",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#C8FF00",
+                "r": 0.7843,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "id": "I38:1123;339:12187",
+          "name": "euro",
+          "text": "euro",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#C8FF00",
+                "r": 0.7843,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "id": "I38:1123;339:12193",
+          "name": "cad",
+          "text": "cad",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#C8FF00",
+                "r": 0.7843,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "id": "I38:1123;339:12197",
+          "name": "jpy",
+          "text": "jpy",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#C8FF00",
+                "r": 0.7843,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "id": "I38:1123;339:12201",
+          "name": "inr",
+          "text": "inr",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#C8FF00",
+                "r": 0.7843,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "id": "I38:1123;339:12205",
+          "name": "cny",
+          "text": "cny",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Regular",
+          "fontWeight": 400,
+          "fontStyle": "Regular",
+          "fontSize": 18.0,
+          "lineHeightPx": 21.600000381469727,
+          "letterSpacing": 0.0,
+          "letterSpacingEm": 0.0,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#C8FF00",
+                "r": 0.7843,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          ]
+        }
+      ],
+      "tailwind": {
+        "gapClass": "gap-[10px]"
+      }
+    },
+    {
+      "id": "38:1263",
+      "name": "Frame 1618873367",
+      "type": "FRAME",
+      "size": {
+        "width": 85.0,
+        "height": 48.0
+      },
+      "position": {
+        "left": 1249.0,
+        "top": 28.0
+      },
+      "layout": {
+        "layoutMode": "HORIZONTAL",
+        "padding": {
+          "paddingTop": 10.0,
+          "paddingBottom": 10.0,
+          "paddingLeft": 20.0,
+          "paddingRight": 20.0
+        },
+        "itemSpacing": 10.0,
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "counterAxisSizingMode": "FIXED",
+        "primaryAxisSizingMode": null
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#C8FF00",
+            "r": 0.7843,
+            "g": 1.0,
+            "b": 0.0,
+            "a": 0.15
+          },
+          "opacity": 0.15
+        }
+      ],
+      "strokes": [],
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10.0
+        }
+      ],
+      "cornerRadius": 31.0,
+      "layoutSizing": {
+        "horizontal": "HUG",
+        "vertical": "FIXED"
+      },
+      "constraints": {
+        "vertical": "TOP",
+        "horizontal": "LEFT"
+      },
+      "textStyles": [
+        {
+          "id": "38:1264",
+          "name": "sign in",
+          "text": "sign in",
+          "fontFamily": "Rajdhani",
+          "fontPostScript": "Rajdhani-Bold",
+          "fontWeight": 700,
+          "fontStyle": "Bold",
+          "fontSize": 16.0,
+          "lineHeightPx": 14.239999771118164,
+          "letterSpacing": -0.64,
+          "letterSpacingEm": -0.04,
+          "textCase": "UPPER",
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "hex": "#FBFBFF",
+                "r": 0.983,
+                "g": 0.9858,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          ]
+        }
+      ],
+      "tailwind": {
+        "paddingClass": "py-[10px] px-[20px]",
+        "gapClass": "gap-[10px]",
+        "roundedClass": "rounded-[31px]",
+        "backdropBlurClass": "backdrop-blur-[10]",
+        "trackingClass": "tracking-[-0.64px]"
+      }
+    },
+    {
+      "id": "38:984",
+      "name": "Frame 1618873364",
+      "type": "FRAME",
+      "size": {
+        "width": 46.0,
+        "height": 46.0
+      },
+      "position": {
+        "left": 1342.0,
+        "top": 29.0
+      },
+      "layout": {
+        "layoutMode": null,
+        "padding": {},
+        "itemSpacing": null,
+        "primaryAxisAlignItems": null,
+        "counterAxisAlignItems": null,
+        "counterAxisSizingMode": null,
+        "primaryAxisSizingMode": null
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "hex": "#C8FF00",
+            "r": 0.7843,
+            "g": 1.0,
+            "b": 0.0,
+            "a": 0.15
+          },
+          "opacity": 0.15
+        }
+      ],
+      "strokes": [],
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 10.0
+        }
+      ],
+      "cornerRadius": 100.0,
+      "layoutSizing": {
+        "horizontal": null,
+        "vertical": null
+      },
+      "constraints": {
+        "vertical": "TOP",
+        "horizontal": "LEFT"
+      },
+      "textStyles": [],
+      "tailwind": {
+        "roundedClass": "rounded-[100px]",
+        "backdropBlurClass": "backdrop-blur-[10]"
+      }
+    }
+  ]
+}

@@ -1,15 +1,39 @@
 :root {
-  --bg-deep: #05091d;
-  --text-on-dark: #fbfbff;
-  --accent-neon: #c8ff00;
+  /* Core colors */
+  --color-ink: #05091d;
+  --color-surface: #fbfbff;
+  --color-accent-lime: #c8ff00;
+
+  /* Legacy aliases kept for existing styles */
+  --bg-deep: var(--color-ink);
+  --text-on-dark: var(--color-surface);
+  --accent-neon: var(--color-accent-lime);
   --stroke-dark: #2c3140;
-  --nav-hero-gradient: radial-gradient(720px 360px at 120px 50%, rgba(200, 255, 0, 0.14) 0%, rgba(5, 9, 29, 0.08) 45%, rgba(5, 9, 29, 0) 70%);
+  --nav-hero-gradient: radial-gradient(
+    720px 360px at 120px 50%,
+    rgba(200, 255, 0, 0.14) 0%,
+    rgba(5, 9, 29, 0.08) 45%,
+    rgba(5, 9, 29, 0) 70%
+  );
   --nav-neutral: #2e3721;
   --nav-ring: #3a4725;
-}
 
-:root {
+  /* Typography tokens */
   --font-rajdhani: "Rajdhani", sans-serif;
+  --font-rajdhani-400: "Rajdhani", sans-serif;
+  --font-rajdhani-700: "Rajdhani", sans-serif;
   --font-manrope: "Manrope", system-ui, sans-serif;
+  --tracking-catalog: 0.15em;
+  --tracking-sign-in: -0.04em;
+
+  /* Radius tokens */
+  --radius-8: 8px;
+  --radius-31: 31px;
+  --radius-50: 50px;
+  --radius-100: 100px;
   --radius-base: 0.5rem;
+
+  /* Backdrop blur tokens */
+  --blur-10: 10px;
+  --blur-30: 30px;
 }

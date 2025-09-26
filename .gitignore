@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 design/figma-file.json
+
+design/figma-live.json

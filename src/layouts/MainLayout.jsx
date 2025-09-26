@@ -1,5 +1,5 @@
 import Footer from "@/pages/Shared/Footer";
-import Navbar from "@/pages/Shared/Navbar";
+import Navbar from "@/components/Navbar";
 import { Outlet, ScrollRestoration, useLocation } from "react-router";
 
 function MainLayout() {

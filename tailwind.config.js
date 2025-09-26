@@ -12,6 +12,8 @@ export default {
         Manpore: ["Manrope", "serif"],
         rajdhani: ["var(--font-rajdhani)", "Rajdhani", "sans-serif"],
         manrope: ["var(--font-manrope)", "Manrope", "system-ui", "sans-serif"],
+        "nav-rajdhani": ["var(--font-rajdhani)", "Rajdhani", "sans-serif"],
+        "nav-manrope": ["var(--font-manrope)", "Manrope", "system-ui", "sans-serif"],
       },
       colors: {
         primaryColor: "var(--accent-neon)",
@@ -24,6 +26,9 @@ export default {
         strokedark: "var(--stroke-dark)",
         navneutral: "var(--nav-neutral)",
         navring: "var(--nav-ring)",
+        ink: "var(--color-ink)",
+        surface: "var(--color-surface)",
+        "accent-lime": "var(--color-accent-lime)",
       },
       backgroundImage: {
         singhero: "url(./src/assets/images/signinmainbg.png)",
@@ -35,9 +40,19 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "nav-8": "var(--radius-8)",
+        "nav-31": "var(--radius-31)",
+        "nav-50": "var(--radius-50)",
+        "nav-100": "var(--radius-100)",
       },
       letterSpacing: {
         wide2: ".08em",
+        "nav-catalog": "var(--tracking-catalog)",
+        "nav-sign-in": "var(--tracking-sign-in)",
+      },
+      backdropBlur: {
+        nav: "var(--blur-10)",
+        "nav-strong": "var(--blur-30)",
       },
       keyframes: {
         "accordion-down": {

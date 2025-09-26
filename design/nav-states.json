@@ -1,0 +1,308 @@
+{
+  "controls": [
+    {
+      "id": "catalog-chip",
+      "label": "Catalog CTA",
+      "states": {
+        "default": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 1.0
+          },
+          "text": {
+            "color": "var(--color-ink)",
+            "tracking": "var(--tracking-catalog)"
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.2
+          },
+          "backdropBlur": "var(--blur-10)",
+          "cornerRadius": "var(--radius-8)"
+        },
+        "hover": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 1.0
+          },
+          "text": {
+            "color": "var(--color-ink)"
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.32
+          },
+          "shadow": "0 0 12px rgba(200,255,0,0.35)"
+        },
+        "focus": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 1.0
+          },
+          "text": {
+            "color": "var(--color-ink)"
+          },
+          "ring": {
+            "color": "var(--nav-ring)",
+            "offset": 2,
+            "opacity": 0.8
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.2
+          }
+        },
+        "active": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 1.0
+          },
+          "text": {
+            "color": "var(--color-ink)"
+          },
+          "stroke": {
+            "color": "var(--color-ink)",
+            "opacity": 0.25
+          }
+        }
+      },
+      "contrast": {
+        "default": 16.7
+      }
+    },
+    {
+      "id": "search-field",
+      "label": "Search input",
+      "states": {
+        "default": {
+          "background": {
+            "color": "var(--color-surface)",
+            "opacity": 0.05
+          },
+          "text": {
+            "color": "rgba(255,255,255,0.5)",
+            "fontFamily": "var(--font-rajdhani)",
+            "fontSize": 18
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.2
+          },
+          "icon": {
+            "color": "var(--color-surface)",
+            "opacity": 0.8
+          },
+          "cornerRadius": "var(--radius-50)",
+          "backdropBlur": "var(--blur-10)"
+        },
+        "hover": {
+          "background": {
+            "color": "var(--color-surface)",
+            "opacity": 0.08
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.28
+          }
+        },
+        "focus": {
+          "background": {
+            "color": "var(--color-surface)",
+            "opacity": 0.12
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.4
+          },
+          "ring": {
+            "color": "var(--nav-ring)",
+            "offset": 2,
+            "opacity": 0.9
+          }
+        },
+        "active": {
+          "background": {
+            "color": "var(--color-surface)",
+            "opacity": 0.12
+          },
+          "stroke": {
+            "color": "var(--color-surface)",
+            "opacity": 0.4
+          }
+        }
+      },
+      "contrast": {
+        "default": 4.53
+      }
+    },
+    {
+      "id": "region-selector",
+      "label": "Region dropdown",
+      "states": {
+        "default": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.05
+          },
+          "stroke": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.4
+          },
+          "text": {
+            "color": "var(--color-accent-lime)",
+            "fontFamily": "var(--font-rajdhani)",
+            "fontWeight": 400
+          },
+          "icon": {
+            "color": "var(--color-accent-lime)"
+          },
+          "chevron": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.8
+          },
+          "cornerRadius": "var(--radius-100)",
+          "backdropBlur": "var(--blur-30)"
+        },
+        "hover": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.08
+          },
+          "stroke": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.55
+          }
+        },
+        "focus": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.1
+          },
+          "stroke": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.6
+          },
+          "ring": {
+            "color": "var(--nav-ring)",
+            "offset": 2,
+            "opacity": 0.85
+          }
+        },
+        "active": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.12
+          },
+          "stroke": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.7
+          }
+        }
+      },
+      "contrast": {
+        "default": 15.5
+      }
+    },
+    {
+      "id": "sign-in",
+      "label": "Sign-in button",
+      "states": {
+        "default": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.15
+          },
+          "text": {
+            "color": "var(--color-surface)",
+            "tracking": "var(--tracking-sign-in)",
+            "fontWeight": 700
+          },
+          "cornerRadius": "var(--radius-31)",
+          "backdropBlur": "var(--blur-10)"
+        },
+        "hover": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.24
+          },
+          "text": {
+            "color": "var(--color-ink)"
+          }
+        },
+        "focus": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.24
+          },
+          "text": {
+            "color": "var(--color-ink)"
+          },
+          "ring": {
+            "color": "var(--nav-ring)",
+            "offset": 2,
+            "opacity": 0.85
+          }
+        },
+        "active": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.3
+          },
+          "text": {
+            "color": "var(--color-ink)"
+          }
+        }
+      },
+      "contrast": {
+        "default": 13.82
+      }
+    },
+    {
+      "id": "cart",
+      "label": "Cart icon button",
+      "states": {
+        "default": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.15
+          },
+          "icon": {
+            "color": "var(--color-surface)"
+          },
+          "cornerRadius": "var(--radius-100)",
+          "backdropBlur": "var(--blur-10)"
+        },
+        "hover": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.24
+          }
+        },
+        "focus": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.24
+          },
+          "ring": {
+            "color": "var(--nav-ring)",
+            "offset": 2,
+            "opacity": 0.85
+          }
+        },
+        "active": {
+          "background": {
+            "color": "var(--color-accent-lime)",
+            "opacity": 0.32
+          }
+        }
+      },
+      "contrast": {
+        "default": 13.82
+      }
+    }
+  ],
+  "notes": [
+    "Hover/focus/active states inferred from design language; confirm in Figma once interactive variants are supplied.",
+    "All text passes WCAG AA contrast against blended backgrounds based on current calculations."
+  ]
+}
