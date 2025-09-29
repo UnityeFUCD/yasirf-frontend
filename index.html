@@ -17,5 +17,41 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Sticky snippet start -->
+    <style>
+      .og-navbar.is-sticky {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        background: inherit;
+        box-shadow: 0 8px 16px -12px rgba(0,0,0,0.2);
+      }
+    </style>
+    <script>
+    (function () {
+      var navbar = document.querySelector('#header, header, nav, .navbar, .site-header');
+      if (!navbar) return;
+      navbar.classList.add('og-navbar');
+      var spacer = document.createElement('div');
+      spacer.style.width = '100%'; spacer.style.height = '0px'; spacer.style.pointerEvents = 'none';
+      spacer.setAttribute('aria-hidden', 'true'); navbar.after(spacer);
+      var sentinel = document.createElement('div');
+      sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;';
+      navbar.parentNode.insertBefore(sentinel, navbar);
+      function stick(){ if(!navbar.classList.contains('is-sticky')){ navbar.classList.add('is-sticky'); spacer.style.height = navbar.offsetHeight + 'px';}}
+      function unstick(){ if(navbar.classList.contains('is-sticky')){ navbar.classList.remove('is-sticky'); spacer.style.height = '0px';}}
+      if('IntersectionObserver' in window){
+        var observer = new IntersectionObserver(function(e){ (e[0] && e[0].isIntersecting) ? unstick() : stick(); }, {threshold:0});
+        observer.observe(sentinel);
+      } else {
+        function onScroll(){ var y = window.pageYOffset || document.documentElement.scrollTop || 0; (y>0)?stick():unstick(); }
+        window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+      }
+      if('ResizeObserver' in window){
+        new ResizeObserver(function(){ if(navbar.classList.contains('is-sticky')) spacer.style.height = navbar.offsetHeight + 'px'; }).observe(navbar);
+      } else {
+        window.addEventListener('resize', function(){ if(navbar.classList.contains('is-sticky')) spacer.style.height = navbar.offsetHeight + 'px'; });
+      }
+    })();
+    </script>
+    <!-- Sticky snippet end -->
   </body>
 </html>
