@@ -492,64 +492,65 @@ const Navbar = () => {
                         <p className="font-nav-rajdhani text-xs font-bold uppercase tracking-[0.12em] text-[color:var(--color-accent-lime)]/80">
                           Choose game
                         </p>
-                      <ul className="mt-4 flex flex-col gap-2">
-                        {catalogGames.map((game) => (
-                          <li key={game}>
-                            <button
-                              type="button"
-                              onClick={() => setActiveGame(game)}
-                              className={cn(
-                                "flex w-full items-center justify-between rounded-lg px-3 py-2 text-left font-nav-rajdhani text-sm uppercase tracking-[0.08em] transition",
-                                activeGame === game
-                                  ? "bg-[color:var(--nav-accent-12)] text-white"
-                                  : "text-white/60 hover:text-white"
-                              )}
-                            >
-                              <span>{game}</span>
-                              {activeGame === game && (
-                                <span className="text-xs font-semibold text-[color:var(--color-accent-lime)]">active</span>
-                              )}
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                      {(activeGame === defaultGame || !activeGame) &&
-                      Object.keys(catalogCategories).length > 0 ? (
-                        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-                          {Object.entries(catalogCategories).map(([key, values]) => (
-                            <div key={key} className="space-y-3">
-                              <p className="font-nav-rajdhani text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent-lime)]/70">
-                                {key.replaceAll("_", " ")}
-                              </p>
-                              <ul className="space-y-2">
-                                {values.map((value) => (
-                                  <li key={value}>
-                                    <a
-                                      href="#"
-                                      className="flex items-center justify-between text-sm text-white/70 transition hover:text-white"
-                                    >
-                                      <span>{value}</span>
-                                      <span aria-hidden="true">→</span>
-                                    </a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+                        <ul className="mt-4 flex flex-col gap-2">
+                          {catalogGames.map((game) => (
+                            <li key={game}>
+                              <button
+                                type="button"
+                                onClick={() => setActiveGame(game)}
+                                className={cn(
+                                  "flex w-full items-center justify-between rounded-lg px-3 py-2 text-left font-nav-rajdhani text-sm uppercase tracking-[0.08em] transition",
+                                  activeGame === game
+                                    ? "bg-[color:var(--nav-accent-12)] text-white"
+                                    : "text-white/60 hover:text-white"
+                                )}
+                              >
+                                <span>{game}</span>
+                                {activeGame === game && (
+                                  <span className="text-xs font-semibold text-[color:var(--color-accent-lime)]">active</span>
+                                )}
+                              </button>
+                            </li>
                           ))}
-                        </div>
-                      ) : (
-                        <div className="rounded-2xl border border-dashed border-white/20 bg-black/30 p-10 text-center">
-                          <p className="font-nav-rajdhani text-lg font-semibold uppercase tracking-[0.18em] text-white">
-                            {(activeGame || "Selected game").toLowerCase()} coming soon
-                          </p>
-                          <p className="mt-2 text-sm text-white/60">
-                            We are polishing the {activeGame || "selected"} catalog. Check back shortly or explore the featured game instead.
-                          </p>
-                        </div>
-                      )}
+                        </ul>
+                      </div>
+
+                      <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                        {((activeGame === defaultGame || !activeGame) &&
+                          Object.keys(catalogCategories).length > 0) ? (
+                          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                            {Object.entries(catalogCategories).map(([key, values]) => (
+                              <div key={key} className="space-y-3">
+                                <p className="font-nav-rajdhani text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--color-accent-lime)]/70">
+                                  {key.replaceAll("_", " ")}
+                                </p>
+                                <ul className="space-y-2">
+                                  {values.map((value) => (
+                                    <li key={value}>
+                                      <a
+                                        href="#"
+                                        className="flex items-center justify-between text-sm text-white/70 transition hover:text-white"
+                                      >
+                                        <span>{value}</span>
+                                        <span aria-hidden="true">→</span>
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="rounded-2xl border border-dashed border-white/20 bg-black/30 p-10 text-center">
+                            <p className="font-nav-rajdhani text-lg font-semibold uppercase tracking-[0.18em] text-white">
+                              {(activeGame || "Selected game").toLowerCase()} coming soon
+                            </p>
+                            <p className="mt-2 text-sm text-white/60">
+                              We are polishing the {activeGame || "selected"} catalog. Check back shortly or explore the featured game instead.
+                            </p>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
